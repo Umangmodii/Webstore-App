@@ -1,0 +1,26 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      layout="2columns-right"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Contact Us</title>
+    </head>
+    <body>
+        <!-- Contact form -->
+        <referenceContainer name="content">
+            <block class="Magento\Contact\Block\ContactForm" name="contactForm" template="Magento_Contact::form.phtml">
+                <arguments>
+                    <argument name="button_lock_manager" xsi:type="object">Magento\Framework\View\Element\ButtonLockManager</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <!-- CMS Block in Right Sidebar (before Compare Products) -->
+        <referenceContainer name="sidebar.additional">
+            <block class="Magento\Cms\Block\Block" name="contact_address_sidebar" before="catalog.compare.sidebar">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">contact_address</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

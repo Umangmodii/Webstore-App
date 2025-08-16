@@ -1,0 +1,15 @@
+# Magento 2 specific
+/app/etc/env.php
+/var/
+/pub/media/
+/pub/static/
+/generated/
+/vendor/
+/auth.json
+/node_modules/
+
+# IDEs and system files
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
